@@ -1,0 +1,171 @@
+.not-found {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 150px;
+    height: 100%;
+    box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.22), 1px 0px 0px 0px rgba(0,0,0,0.22), 1px 2px 0px 0px rgba(0,0,0,0.22), 2px 1px 0px 0px rgba(0,0,0,0.22), 2px 3px 0px 0px rgba(0,0,0,0.22), 3px 2px 0px 0px rgba(0,0,0,0.22), 3px 4px 0px 0px rgba(0,0,0,0.22), 4px 3px 0px 0px rgba(0,0,0,0.22), 4px 5px 0px 0px rgba(0,0,0,0.22), 5px 4px 0px 0px rgba(0,0,0,0.22), 5px 6px 0px 0px rgba(0,0,0,0.22), 6px 5px 0px 0px rgba(0,0,0,0.22), 6px 7px 0px 0px rgba(0,0,0,0.22), 7px 6px 0px 0px rgba(0,0,0,0.22), 7px 8px 0px 0px rgba(0,0,0,0.22), 8px 7px 0px 0px rgba(0,0,0,0.22);
+  }
+  .basket {
+    background: var(--white);
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    padding: 5rem;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    height: 82%;
+    transform: translate(-50%, -50%);
+    width: 87%;
+    z-index: 20;
+    &__main-card {
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        width: 2px;
+        height: 100px;
+        background: #d4d3d3;
+      }
+    }
+    .basket__modal-header {
+      display: flex;
+      justify-content: space-between;
+      .basket__header-btn {
+        background: var(--white);
+        cursor: pointer;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 31px;
+        width: 35px;
+        border: 1px solid #bdbdbd;
+        svg {
+          background: none;
+          border: none;
+          height: 25px;
+          width: 25px;
+        }
+      }
+    }
+    .basket__header-title {
+      color: var(--black);
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.9rem;
+    }
+  }
+  .basket__modal-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+  }
+  .basket__modal-footer-text-wrap {
+    span {
+      // margin-top: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.5px;
+      h2{
+      font-size: 16px;
+      line-height: 1.6px;
+      color: gray
+      }
+    }
+  }
+  .purchase {
+      background: #4675ff;
+      border: 1px solid #4675ff;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+      padding: 12px 24px;
+      transition: all .3s ease;
+      margin-top: 10px;
+      a{
+        color: #fff;
+        display: inline-flex;
+        height: 100%;
+        width: 100%;
+      }
+      &:hover {
+        color: #4675ff;
+        background: var(--white);
+        a{
+          color: #4675ff;
+        }
+      }
+}
+
+
+
+@media screen and (max-width:944px) {
+    .basket {
+        height: 84%;
+        .basket__modal-main {
+            .basket__main-card {
+                .basket-product {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .basket__product-text {
+                        text-align: center;
+                    }
+                    .basket__product-price {
+                        text-align: center;
+                        width: 100%;
+                    }
+                    .basket__product-image {
+                        width: inherit;
+                    }
+                    .basket__text-wrapper {
+                        width: max-content;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px)  {
+    .basket {
+        .basket__modal-header {
+            .basket__header-title {
+                font-size: 1rem;
+                line-height: 1.5;
+                font-weight: 500;
+            }
+        }
+        .basket__modal-footer {
+                display: flex;
+                flex-direction: column;
+                // margin-top: 10px;
+                // padding-bottom: 10px;
+                .basket__modal-footer-text-wrap {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                }
+            span {
+                color: red;
+            }
+        }
+    }
+}

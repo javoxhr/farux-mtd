@@ -1,0 +1,405 @@
+.detail {
+  // .detail-wrap {
+  //     display: flex;
+  //     // justify-content: space-between;
+  // }
+  .detail-wrap-borders {
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+  }
+  .detail-image-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .detail-image-header {
+      width: 100%;
+      max-width: 330px;
+      height: 330px;
+      border: 1px solid #f2f2f2;
+      border-radius: 5px;
+      object-fit: contain;
+    }
+    .detail-footer-image {
+      display: flex;
+      gap: 16px;
+      img {
+        width: 67px;
+        height: 60px;
+        border: 1px solid #f2f2f2;
+        border-radius: 5px;
+        padding: 5px;
+      }
+    }
+  }
+  .detail-info-wrap {
+    h1 {
+      @include font(700, 36px, 34.45px);
+      color: var(--black);
+    }
+    .detail-option {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      span {
+        @include font(400, 20px, 19.14px);
+        color: var(--black);
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .special-card__favourite {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      .buy {
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          svg {
+            path {
+              fill: var(--br-color);
+              stroke: var(--br-color);
+            }
+          }
+        }
+      }
+    }
+    .detail-btn {
+      margin-top: 43px;
+      button {
+        @include font(400, 16px, 15.31px);
+        color: var(--white);
+        padding: 12px 51px 12px 51px;
+        background-color: var(--br-color);
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        a{
+          color: #fff;
+        }
+      }
+    }
+    .detail-name {
+      margin-top: 60px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      span {
+        @include font(400, 14px, 25.2px);
+        color: #909090;
+      }
+      p {
+        @include font(400, 14px, 25.2px);
+        color: var(--black);
+        width: 100%;
+        max-width: 280px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 4;
+      }
+    }
+  }
+  .detail-texnic {
+    margin-top: 40px;
+    .detail-texnic-header {
+      @include font(400, 24px, 22.97px);
+      color: var(--black);
+    }
+    .texnic-info {
+      padding: 15px;
+      display: flex;
+      gap: 30px;
+      transition: all 0.3s ease;
+      // justify-content: space-between;
+      &:hover {
+        cursor: pointer;
+        color: #f2f2f2;
+        // border: 1px solid #f2f2f2;
+        border-radius: 6px;
+        background-color: #f2f2f2;
+      }
+      .texnic-name {
+        @include font(400, 14px, 25.2px);
+        color: #909090;
+      }
+      .texnic-info-detail {
+        @include font(400, 14px, 25.2px);
+        color: var(--black);
+      }
+    }
+  }
+  .detail-info-model {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    .detail-texnic-header {
+      @include font(400, 24px, 22.97px);
+      color: var(--black);
+    }
+    .texnic-info {
+      display: flex;
+      gap: 30px;
+    }
+  }
+  .detail-vip {
+    display: flex;
+    align-items: center;
+    margin-top: 43px;
+  }
+  .detail-likes-tit {
+    display: flex;
+    margin-top: 43px;
+    gap: 80px;
+  }
+  .detail-clasifikation {
+    margin-bottom: 40px;
+  }
+  .detail-autidory {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+  .detail-procesor {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+.detail-texnic-header {
+  @include font(400, 24px, 22.97px);
+  color: var(--black);
+}
+.texnic-name {
+  @include font(400, 14px, 25.2px);
+  color: #909090;
+}
+.texnic-info-detail {
+  @include font(400, 14px, 25.2px);
+  color: var(--black);
+}
+.texnic-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.detail-support {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .support-card {
+    border: 1px solid #f2f2f2;
+    background: #f2f2f2;
+    border-radius: 5px;
+    padding: 30px 29px 30px 40px;
+    .support-card__header {
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.7;
+        color: var(--black)
+      }
+    }
+    .support-card__main {
+      p {
+        @include font(400, 14px, 22.4px);
+        color:#909090;
+        width: 100%;
+        max-width: 256px;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 5px;
+        span{
+          color: blue;
+          cursor: pointer;
+        }
+      }
+    }
+    .support-more {
+      a {
+        @include font(400, 14px, 22.4px);
+        color:#909090;
+        margin-top: 5px;
+        display: flex;
+        align-items: left;
+        flex-direction: column;
+        gap: 5px;
+        span {
+          color: blue;
+        }
+      }
+    }
+    li {
+      list-style: disc;
+      color: #909090;
+      font-size: 13px;
+      padding: 5px;
+    }
+  }
+}
+.texnic-info {
+  padding: 15px;
+  display: flex;
+  // gap: 30px;
+  transition: all 0.3s ease;
+  // justify-content: space-between;
+  &:hover {
+    cursor: pointer;
+    color: #f2f2f2;
+    // border: 1px solid #f2f2f2;
+    border-radius: 6px;
+    background-color: #f2f2f2;
+  }
+  .texnic-name {
+    @include font(400, 14px, 25.2px);
+    color: #909090;
+  }
+  .texnic-info-detail {
+    @include font(400, 14px, 25.2px);
+    color: var(--black);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .detail {
+    .detail-wrap-borders {
+      display: flex;
+      flex-direction: column;
+    }
+    .detail-info-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .detial-name {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+      }
+    }
+    .detail-image-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .detail-support {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .detail {
+    .detail-support {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+@media screen and (max-width: 655px) {
+  .detail {
+    .detail-support {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      .support-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .detail {
+    .detail-info-wrap {
+      h1 {
+        @include font(700, 24px, 34.45px);
+      }
+      .detail-option {
+        span {
+          @include font(400, 16px, 19.14px);
+        }
+      }
+      .detail-name {
+        p {
+          @include font(400, 12px, 25.2px);
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    }
+    .detail-texnic {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-info-model {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-clasifikation {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-autidory {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-display {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-procesor {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .detail-storage {
+      .detail-texnic-header {
+        @include font(400, 19px, 22.97px);
+      }
+    }
+    .texnic-info {
+      .texnic-info-detail {
+        @include font(400, 12px, 25.2px);
+      }
+    }
+    .detail-support {
+      .support-card {
+        display: flex;
+        gap: 20px;
+        span {
+          text-align: center;
+        }
+        .support-card__main {
+          p {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}

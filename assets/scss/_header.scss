@@ -1,0 +1,251 @@
+.header {
+    background-color: var(--br-color);
+    &__logo {
+        display: flex;
+        gap: 7px;
+        align-items: center;
+        // margin-right: 74px;
+        span {
+            @include font(400,14px, 25.2px);
+            color: var(--white);
+        }
+        #phone{
+            display: none;
+        }
+    }
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
+    &__menu {
+        &-list{
+            display: flex;
+            align-items: center;
+            gap: 33px;
+            margin-right: 155px;
+                a {
+                    @include font(400,14px, 25.2px);
+                    color: var(--white);
+                }
+        }
+    }
+    &__nav {
+        display: flex;
+        align-items: center;
+        span {
+            @include font(400,18px, 17.23px);
+            color: var(--white);
+        }
+        .header__nav-tell {
+            display: flex;
+            align-items: center;
+        }
+        .header-nav__lang {
+            display: flex;
+            margin-left: 53px;
+        }
+        &-phone {
+            margin-right: 5px;
+        }
+    }
+}
+.top-silka {
+    display: none;
+}
+#none {
+    display: none;
+    path{
+        fill: var(--br-color);
+        stroke: var(--br-color);
+    }
+}
+
+#open-category {
+    display: flex;
+    gap: 70px;
+    // flex-direction: column;
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        position: relative;
+        width: 100%;
+        max-width: 330px;
+        li{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            // position: relative;
+            transition: all ease .5s;
+            // padding-top: 10px;
+            // padding-bottom: 13px;
+            &:hover {
+                background-color: #f2f2f2;
+                // border: 1px solid #f2f2f2;
+                border-radius: 5px;
+                width: 100%;
+                // position: relative;
+                left: 1%;
+            }
+            .network {
+                position: absolute;
+                top:0%;
+                left: 110%;
+                width: 100%;
+                display: flex;
+                // align-items: center;
+                flex-direction: column;
+                span {
+                    cursor: pointer;
+                    font-size: 15px;
+                    line-height: 1.6;
+                    font-weight: 500;
+                    display: none;
+                }
+                h4 {
+                    font-size: 22px;
+                    font-weight: 600;
+                    line-height: 1.6;
+                    margin-bottom: 20px;
+                }
+                // gap: 50px;
+                // .network-list {
+                //     height: fit-content;
+                //     margin-top: 40px;
+                //     margin-bottom: 40px;
+                //     // margin-right: 50px;
+                //     // display: flex;
+                //     // align-items: center;
+                //     // flex-direction: column;
+                //     li{
+                //         width: 100%;
+                //         font-size: 15px;
+                //         line-height: 1.8;
+                //     // margin-top: 50px;    
+                //         // margin-bottom: 50px;
+                //         // font-weight: 700;
+                //         a{
+                //             font-size: 15px;
+                //             line-height: 1.7;
+                //             // font-weight: 500;
+                //         }
+                //     }
+                // }
+            }
+        }
+        img{
+            width: 25px;
+            height: 25px;
+        }
+        .strelka-arrow {
+            margin-left: 50px;
+            position: absolute;
+            left: 80%;
+            width: 6px;
+            height: 12px;
+        }
+        a{
+            @include font(400,16px,25.6px);
+            transition: all .5s ease;
+            // height: 20px;
+
+            padding: 8px;
+            color: var(--black);
+        }
+    }
+}
+.tp-link {
+    padding-top: 59px;
+}
+// .network {
+//     h4{
+//         @include font(400,24px,22.97px);
+//         padding-bottom: 27px;
+//         color: var(--black);
+//     }
+// }
+.header-lang-b{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 70px;
+    top: 40px;
+    z-index: 40;
+    background-color: #Fff;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1300px) {
+    .header {
+        .header__content {
+            #one {
+                display: none;
+            }
+        }
+        .header__menu-list {
+            margin-right: 0;
+        }
+    }
+}
+@media screen and (max-width:1070px) {
+    .header {
+        .header__nav-tell {
+            display: none;
+        }
+    }
+}
+@media screen  and (max-width:950px) {
+    .header {
+        display: none;
+    }
+}
+@media screen  and (max-width:558px) {
+    .header {
+        display: block;
+        background: #Fff;
+        // flex-wrap: wrap-reverse;
+        .header__content {
+            display: flex;
+            // flex-direction: row-reverse;
+            // flex-wrap: wrap-reverse;
+        }
+        // background-color: var(--white);
+        .header__menu {
+            display: none;
+        }
+        .header__nav-tell {
+            display: block;
+            span{
+                display: none;
+            }
+            #none {
+                display: block;
+            }
+            #phone {
+                display: none;
+            }
+        }
+        .header-nav__lang {
+            display: none;
+        }
+        .header__logo {
+            #none {
+                display: none;
+            }
+            #changed {
+                svg{
+                    path{
+                        color: #909090;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,494 @@
+.cheap-products {
+    .special__cards-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        // flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 40px;
+        .special__cards-card {
+            // width: 100%;
+            // max-width: 350px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #f2f2f2;
+            border-radius: 5px, 5px, 0px, 0px;
+            img{
+                margin-top: 10px;
+                // margin-left: 68px;
+                // margin-right: 68px;
+                width: 100%;
+                max-width: 144px;
+            }
+            .special__card-priceee{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+                // padding-left: 16px;
+                // padding-right: 16px;
+            }
+            .line {
+                display: none;
+            }
+            h1{
+                padding-top: 10px;
+                padding-bottom: 25px;
+                @include font(700,16px,24px);
+                text-align: center;
+                color: black;
+                width: 100%;
+                max-width: 234px;
+            }
+            .special__card-price {
+                @include font(400,18px,17.23px);
+                color: var(--br-color);
+            }
+            .special__card-pricee{
+                @include font(400,14px,25.2px);
+                color: var(--sub);
+            }
+            .special__card-data {
+                display: flex;
+                // padding-left: 38px;
+                // padding-right: 36px;
+                // padding-bottom: 19px;
+                .special__data-day {
+                    margin-left: 21px;
+                    padding-bottom: 19px;
+                    display: flex;
+                    // gap: 21px;
+                    flex-direction: column;
+                     span {
+                        @include font(400,16px,25.6px);
+                        color:#202020;
+                        text-align: center;
+                     }
+                     a{
+                        @include font(400,8px,14.4px);
+                        text-align: center;
+                        color: var(--sub);
+                     }
+                }
+            }
+            .special-card__favourite {
+                border: 1px solid #f2f2f2;
+                // padding-top: 10px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                width: 100%;
+                justify-content: center;
+                .line {
+                    height: 20px;
+                }
+                img{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+    }
+    .cheap-products__item {
+        padding-top: 80px;
+        .cheap__banners-wrap {
+            padding-top: 40px;
+            display: flex;
+            // flex-wrap: wrap;
+            // justify-content: space-between;
+            gap: 30px;
+            .cheap__card-wrap {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                // flex-wrap: wrap;
+                gap: 30px;
+            }
+            .cheap__card {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border: 1px solid #f2f2f2;
+                border-radius: 5px, 5px, 0px, 0px;
+                // margin-left: 30px;
+                .cheap__card-span {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-top: 16px;
+                    span {
+                       @include font(400,18px,17.23px);
+                       color: var(--br-color);
+                    }
+                    h5{
+                       @include font(400,14px,25.2px);
+                    //    padding-top: 16px;
+                       color: var(--sub);
+                    }
+                }
+                .special-card__favourite {
+                    border: 1px solid #f2f2f2;
+                padding-top: 10px;
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                width: 100%;
+                justify-content: center;
+                    .line {
+                        height: 20px;
+                    }
+                    .line {
+                    height: 20px;
+                }
+                img{
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    width: 24px;
+                    height: 24px;
+                }
+                }
+                 p{
+                    @include font(700,16px,24px);
+                    padding-top: 14px;
+                    margin-left: 33px;
+                    margin-right: 33px;
+                    padding-bottom: 20px;
+                    text-align: center;
+                    color: var(--black);
+                    width: 100%;
+                    max-width: 174px;
+                 }
+            }
+        }
+    }
+    .cheap__brands {
+       width: 100%;
+        padding-top: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .cheap__brands-wrap {
+            display: flex;
+            gap: 20px;
+        }
+        h1{
+          @include font(400,24px,22.97px);
+        }
+    }
+    .cheap__brands-border {
+        padding-top: 50px;
+        display: flex;
+        // flex-wrap: wrap;
+        gap: 25px;
+    }
+    .cheap__brands-card {
+        width: 100%;
+        // max-width: 250px;
+        border-radius: 5px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        padding: 5px 50px;
+        height: 150px;
+        img {
+          width: 100%;
+          object-fit: contain;
+          height: 100px;
+          padding: 5px;
+        }
+    }
+}
+@media screen and (max-width:1300px)  {
+  .cheap-products {
+    .cheap__brands-border {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width:1285px) {
+    .cheap-products__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .cheap-banner {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    .cheap-products{
+      .special__cards-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+}
+
+@media screen and (max-width:935px) {
+    .cheap-products {
+        .cheap-products__item {
+            .cheap__banners-wrap {
+                .cheap__card-wrap {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    .cheap-products {
+        .cheap-products__item {
+            .cheap__banners-wrap {
+                .cheap__card-wrap {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:470px) {
+    .cheap-products {
+        .special__cards-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cheap-products__item {
+            .cheap__banners-wrap {
+                .cheap__card-wrap {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    .cheap__card {
+                        p{
+                          width: 100%;
+                          max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 846px) {
+    .cheap-products {
+      .special__cards-bottom {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+}
+
+@media screen and (max-width:569px) {
+    .cheap-products {
+      .special__cards-top {
+        h1{
+          @include font(400,16px,25px)
+        }
+      }
+      .special__cards-all {
+        a {
+          @include font(400,13px,25.6px);
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 589px) {
+    .cheap-products {
+      .special__cards-bottom {
+        .special__cards-card {
+          .special__card-priceee {
+            display: flex;
+            gap: 9px;
+            .special__card-price {
+              @include font(400, 10px, 25.2px);
+            }
+            .special__card-pricee {
+              @include font(400, 13px, 25.2px);
+            }
+          }
+        }
+        .special__cards-card {
+          h1 {
+            @include font(700, 14px, 25px);
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 521px) {
+    .cheap-products {
+      .special__cards-bottom {
+        gap: 20px;
+        .special__cards-card {
+          .special__card-priceee {
+            display: flex;
+            gap: 9px;
+            .special__card-price {
+              @include font(400, 9px, 25.2px);
+            }
+            .special__card-pricee {
+              @include font(400, 12px, 25.2px);
+            }
+          }
+        }
+        .special__cards-card {
+          h1 {
+            @include font(700, 11px, 25px);
+          }
+          .special__card-data {
+              display: none;
+          }
+        }
+      
+      }
+    }
+}
+
+@media screen and (max-width:495px) {
+  .cheap-products {
+    .cheap__brands-border {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-y: hidden;
+      overflow-x: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 470px) {
+    .cheap-products {
+      .special__cards-bottom {
+        gap: 14px;
+        .special__cards-card {
+          .special__card-priceee {
+            display: flex;
+            gap: 9px;
+            .special__card-price {
+              @include font(400, 9px, 25.2px);
+            }
+            .special__card-pricee {
+              @include font(400, 12px, 25.2px);
+            }
+          }
+        }
+        .special__cards-card {
+          h1 {
+            @include font(700, 12px, 25px);
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width:451px) {
+      .cheap-products {
+        .special__cards-top {
+            h1 {
+                @include font(400,12px,25px);
+                br{
+                    display: none;
+                }
+            }
+        }
+        .special__cards-bottom {
+          .special__cards-card {
+            .special__card-priceee {
+              display: flex;
+              gap: 6px;
+            }
+            h1 {
+              @include font(700,11px,25px);
+            }
+          }
+        }
+      }
+}
+
+@media screen and (max-width:400px) {
+    .cheap-products {
+      .special__cards-top {
+        h1{
+          @include font(400,12px,21.6px);
+        }
+        .special__cards-all {
+          a{
+            @include font(400,12px,21.6px);
+          }
+        }
+      }
+    }
+}
+
+@media screen and (max-width:415px) {
+      .cheap-products {
+          .special__cards-bottom {
+              display: grid;
+              grid-template-columns: 1fr;
+              .special__cards-card {
+                  .special__card-priceee{
+                      display: flex;
+                      gap: 25px;
+                      .special__card-price {
+                          @include font(400,14px,25.2px);
+                      }
+                      .special__card-pricee {
+                          @include font(400,18px,17.23px);
+                      }
+                  }
+                  h1{
+                      @include font(700,16px,24px);
+                  }
+              }
+          }
+      }
+}
+
+@media screen and (max-width:350px) {
+    .cheap-products {
+      .special__cards-top {
+        h1{
+          @include font(400,10px,21.6px);
+        }
+        .special__cards-all {
+          a{
+            @include font(400,10px,21.6px);
+          }
+        }
+      }
+      .special__cards-bottom {
+        .special__cards-card {
+          h1{
+            @include font(700,13px,24px);
+          }
+          .special__card-priceee {
+            display: flex;
+            gap: 20px;
+            .special__card-pricee {
+              @include font(400,12px,25.2px);
+            }
+            .special__card-priceee{
+              @include font(400,13px,25.2px);
+            }
+          }
+        }
+      }
+    }
+}

@@ -1,0 +1,11 @@
+.sign {
+    // display: none;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 550px;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,118 @@
+.login {
+    &__btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    // display: none;
+    position: fixed;
+    z-index: 20;
+    left: 50%;
+    top: 50%;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 550px;
+    transform: translate(-50%, -50%);
+    &-top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #4675ff;
+        border-radius: 6px 6px 0 0;
+        padding: 15px 26px;
+        background-color: var(--br-color);
+        svg{
+            width: 26px;
+            height: 26px;
+            path{
+                fill: #fff;
+            }
+        }
+        h4{
+            @include font(500,18px,1.2);
+            color: #fff;
+        }
+    }
+    &-bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        // background: #f2f2f2;
+        background: #fff;
+        padding: 20px 20px 30px;
+        border-radius: 0 0 6px 6px;
+        h4{
+            @include font(400,15px,1.2);
+            margin-top: 24px;
+            color: #333;
+        }
+        input {
+            @include font(500,16px,1.2);
+            margin-top: .5rem;
+            padding: 12px 24px;
+            width: 100%;
+            border: 1px solid #c9c9c9;
+            // background: transparent;
+            background: none;
+            outline: none;
+            border-radius: 6px;
+        }
+        .login__bottom-password{
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            h1{
+                @include font(400,15px,1.2);
+                color: #333;
+            }
+            button {
+                @include font(400,15px,1.2);
+                background: none;
+                border: none;
+            }
+        }
+        .login-btn {
+            @include font(500,16px,1.2);
+            margin-top: 20px;
+            background-color: var(--br-color);
+            border: 1px solid transparent;
+            border-radius: 6px;
+            color: #fff;
+            cursor: pointer;
+            padding: 12px 24px;
+            transition: all .3s ease;
+            width: 100%;
+            &:hover {
+                background-color: #fff;
+                border: 1px solid var(--br-color);
+                color: var(--br-color)
+            }
+        }
+        .register-btn {
+            @include font(500,16px,1.2);
+            margin-top: 20px;
+            // background: #4675ff;
+            background: none;
+            border: 1px solid var(--br-color);
+            border-radius: 6px;
+            color: var(--br-color);
+            cursor: pointer;
+            padding: 12px 24px;
+            transition: all .3s ease;
+            width: 100%;
+            &:hover {
+                color: #fff;
+                background-color: var(--br-color);
+            }
+        }
+    }
+}
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(32,32,32,0.43);
+    z-index: 15;
+}

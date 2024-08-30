@@ -1,0 +1,127 @@
+.profile {
+  display: flex;
+  gap: 30px;
+  padding: 3rem 0 8rem;
+  .profile-nav {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    border-right: 1px solid #f2f2f2;
+    .profile-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+      padding: 20px 10px;
+      width: 100%;
+      border-radius: 6px;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+    .profile-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+      width: 50px;
+      height: 50px;
+      svg {
+        height: 25px;
+        width: 25px;
+      }
+    }
+    .profile__nav-exit {
+      h4 {
+        color: #202020;
+      }
+    }
+  }
+  .profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 75%;
+  }
+  .user-info {
+    border: 1px solid #f2f2f2;
+    border-radius: 4px;
+    .profile__user-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: #f7f7f7;
+      width: 50px;
+      height: 50px;
+    }
+    .profile__user-btn {
+      @include font(500, 16px, 1.2);
+      background: var(--br-color);
+      color: var(--white);
+      padding: 12px 24px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: 1px solid var(--br-color);
+      border-radius: 6px;
+      &:hover {
+        color: var(--br-color);
+        background: var(--white);
+      }
+    }
+    .user-info-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-bottom: 1px solid #f2f2f2;
+    }
+    span {
+      @include font(500,15px,1.5);
+      color: #202020;
+    }
+  }
+  .profile__user-main {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .user-info-main {
+    border-bottom: 1px solid #f2f2f2;
+    padding: 20px;
+    h4{
+      @include font(500,15px,1.5);
+      margin-bottom: 1.4rem;
+      color: var(--black);
+    }
+    h5{
+      @include font(400,15px,1.5);
+      color: #626364;
+    }
+  }
+  .profile__user-btns {
+    display: flex;
+    gap: 15px;
+    .active-order {
+      @include font(500,15px,1.5);
+      border: 1px solid var(--br-color);
+      color:var(--white);
+      cursor: pointer;
+      padding: 12px 24px;
+      transition: all .3s ease;
+      background: var(--br-color);
+      border-radius: 6px;
+      &:hover {
+        color: var(--br-color);
+        background: var(--white);
+      }
+    }
+  }
+  .cards {
+    display: grid !important;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+  }
+}

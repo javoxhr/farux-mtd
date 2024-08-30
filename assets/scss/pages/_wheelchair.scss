@@ -1,0 +1,211 @@
+.wheelchair {
+  background: #f7f7f7;
+  width: 100%;
+  margin-top: 80px;
+  position: relative;
+  .wheelchair-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 2rem;
+    .wheelchair__wrapper-text {
+      h1 {
+        @include font(500, 40px, 57.29px);
+        color: var(--black);
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 500px;
+        cursor: pointer;
+      }
+      p {
+        @include font(400, 16px, 25.6px);
+        color: #909090;
+        width: 100%;
+        max-width: 418px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-line-clamp: 4;
+      }
+    }
+    .wheelchair-wrapper__price {
+      h4 {
+        @include font(700, 42px, 40.19px);
+        color: var(--br-color);
+        margin-bottom: 50px;
+      }
+      button {
+        @include font(400, 16px, 15.31px);
+        color: var(--br-color);
+        border: 1px solid var(--br-color);
+        padding: 12px 51px 12px 51px;
+        background: none;
+        border-radius: 6px;
+        cursor: pointer;
+        &:hover{
+            transition: all .3s ease;
+            background: none;
+        }
+      }
+    }
+    .wheelchair__wrapper-image {
+      img {
+        width: 310px;
+        height: 277px;
+        object-fit: contain;
+      }
+    }
+  }
+}
+.swiper-button-prev {
+  background: var(--white);
+  border: 2px solid var(--br-color);
+  border-radius: 50%;
+  color: var(--br-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  position: absolute;
+  &::after {
+    font-size: 1.6rem !important ;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+}
+.swiper-button-next {
+  background: var(--white);
+  border: 2px solid var(--br-color);
+  border-radius: 50%;
+  color: var(--br-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  position: absolute;
+  &::after {
+    font-size: 1.6rem !important ;
+    font-weight: 700 !important;
+    line-height: 1 !important;
+  }
+}
+.wheelchair-swiper {
+  padding: 30px;
+}
+
+@media screen and (max-width: 1122px) {
+  .wheelchair {
+    .wheelchair-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .swiper-button-next {
+      display: none;
+    }
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 859px) {
+  .wheelchair {
+    .wheelchair-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .wheelchair__wrapper-text {
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          max-width: 497px;
+        }
+      }
+      .wheelchair-wrapper__price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4 {
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .wheelchair {
+    .wheelchair-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .wheelchair__wrapper-text {
+        h1 {
+          @include font(500, 35px, 57.29px);
+          text-align: center;
+        }
+        p {
+          text-align: center;
+          max-width: 450px;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      .wheelchair-wrapper__price {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4 {
+          @include font(700, 32px, 40.41px);
+          margin-bottom: 35px;
+        }
+      }
+      .wheelchair__wrapper-image {
+        img {
+          height: 250px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 551px) {
+  .wheelchair {
+    .wheelchair__wrapper-text {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .wheelchair {
+    .wheelchair-wrapper {
+      .wheelchair__wrapper-image {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .wheelchair__wrapper-text {
+        h1 {
+          @include font(500, 23px, 47.29px);
+          width: 100%;
+        }
+      }
+      .wheelchair-wrapper__price {
+        h4 {
+          @include font(700, 26px, 40.41px);
+        }
+      }
+    }
+  }
+}
