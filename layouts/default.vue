@@ -402,7 +402,7 @@
 
                   <!-- Показать/скрыть контент в зависимости от активного элемента -->
                   <div class="network" v-if="activeCategory === index">
-                    <span>< ortga qaytish</span>
+                    <span> ortga qaytish</span>
                     <h4>{{ item?.name }} <br /></h4>
                     <div class="network-list">
                       <li @click="store.categoryLi, store.catalogOpen = false" v-for="items in item?.categories"  :key="items.id">
